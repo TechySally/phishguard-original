@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "PhishGuard",
+  "version": "0.1.0",
+  "description": "AI-powered phishing detection — powered by OpenRouter",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://openrouter.ai/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["src/content.ts"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "PhishGuard"
+  },
+  "icons": {
+    "16": "public/icons/icon16.png",
+    "48": "public/icons/icon48.png",
+    "128": "public/icons/icon128.png"
+  }
+}
