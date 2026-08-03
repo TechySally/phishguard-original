@@ -49,14 +49,6 @@ Click the PhishGuard icon in your Chrome toolbar and paste in your OpenRouter AP
 ### 5. Open Gmail
 Navigate to `mail.google.com` and open any email. PhishGuard will automatically scan it and show a badge above the message body.
 
-## Development
-
-\`\`\`bash
-npm run dev    # watches src/ and rebuilds on change
-npm run build  # one-time production build
-\`\`\`
-
-After any code change, rebuild and then click the reload icon on the PhishGuard card at `chrome://extensions` to pick up the new background script. Refresh any open Gmail tabs to reload the content script.
 
 ### Project structure
 \`\`\`
