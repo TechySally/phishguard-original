@@ -4,7 +4,7 @@ AI-powered phishing detection for Gmail. PhishGuard scans emails as you open the
 
 ## Demo
 
-[![PhishGuard demo video](https://img.youtube.com/vi/o62cqE1udFs/maxresdefault.jpg)](https://www.youtube.com/watch?v=o62cqE1udFs)
+[![PhishGuard demo video](https://img.youtube.com/vi/o62cqE1udFs/hqdefault.jpg)](https://www.youtube.com/watch?v=o62cqE1udFs)
 
 *Click the thumbnail above to watch PhishGuard in action.*
 
@@ -15,7 +15,6 @@ AI-powered phishing detection for Gmail. PhishGuard scans emails as you open the
 3. The background worker calls an LLM via OpenRouter, asking it to score the email for phishing indicators (sender spoofing, urgency manipulation, suspicious links, impersonation, etc).
 4. A color-coded badge is injected above the email body showing the verdict, a risk score, and expandable details.
 
-
 ## Features
 
 - 🚨 **Risk scoring (0–100)** with three tiers: Likely Safe, Suspicious, High Risk
@@ -23,7 +22,6 @@ AI-powered phishing detection for Gmail. PhishGuard scans emails as you open the
 - 🆓 **Free to run** — uses OpenRouter's free-tier models, with automatic fallback across multiple models if one is rate-limited or unavailable
 - ⚡ **Fast & lightweight** — results are cached per email so re-opening a thread doesn't re-analyze it
 - 🚫 **One-click report** — flag high-risk emails directly from the badge
-
 
 ## Installation
 
@@ -47,10 +45,9 @@ This compiles the TypeScript source and outputs a loadable extension into `dist/
 Click the PhishGuard icon in your Chrome toolbar and paste in your OpenRouter API key.
 
 ### 5. Open Gmail
-Navigate to `mail.google.com` and open any email. PhishGuard will automatically scan it and show a badge above the message body.
+Navigate to `mail.google.com` and open any email — PhishGuard will automatically scan it and show a badge above the message body.
 
-
-### Project structure
+## Project structure
 \`\`\`
 src/
   background.ts   — service worker: calls OpenRouter, manages API key storage
@@ -60,6 +57,5 @@ src/
 manifest.json     — Chrome extension manifest (Manifest V3)
 vite.config.ts    — build config (uses @crxjs/vite-plugin)
 \`\`\`
-
 
 
